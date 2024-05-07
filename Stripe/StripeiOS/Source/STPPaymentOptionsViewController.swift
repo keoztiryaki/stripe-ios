@@ -103,7 +103,7 @@ public class STPPaymentOptionsViewController: STPCoreViewController,
                 return
             }
             var `internal`: UIViewController?
-            if (tuple.paymentOptions.count) > 0 {
+            if !StripeAPI.paymentMethodFlow, (tuple.paymentOptions.count) > 0 {
                 let customerContext = strongSelf.apiAdapter as? STPCustomerContext
 
                 var payMethodsInternal: STPPaymentOptionsInternalViewController?
