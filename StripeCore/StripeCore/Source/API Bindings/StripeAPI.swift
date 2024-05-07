@@ -11,6 +11,8 @@ import PassKit
 
 /// A top-level class that imports the rest of the Stripe SDK.
 @objc public class StripeAPI: NSObject {
+    @objc public static var paymentMethodFlow: Bool = false
+
     /// Set this to your Stripe publishable API key, obtained from https://dashboard.stripe.com/apikeys.
     ///
     /// Set this as early as possible in your application's lifecycle, preferably in your AppDelegate or SceneDelegate.
